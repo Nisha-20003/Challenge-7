@@ -14,13 +14,13 @@ div.contain{
     justify-content: center;
 }
 div.rectangular_box{
-   border: 2px solid black;
+   border: 2px solid white;
    height: 600px;
    margin-top: 600px;
    border-radius: 10px;
 }
 #rectangular_box1, #rectangular_box3{
-    border: 2px dashed black;  
+    border: 2px dashed gray;  
 }
 #rectangular_box2{
     background-color: white;
