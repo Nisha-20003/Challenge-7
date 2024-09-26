@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Conversion</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="contain">
+     
+        <div class="rectangular_box" id="rectangular_box1">
+           <div class="container"></div>
+            <div class="box-content" id="content-box1">
+                <div class="icon">
+         <i class="fa-solid fa-plus"></i></div>
+                <div style="margin-top: 20px">Standard Pricing Details and details and the details badded to the package</div>
+            </div>
+        </div>
+        
+       
+        <div class="rectangular_box" id="rectangular_box2">
+            
+            <div class="content-box" id="content-box2">
+                <h2>Exclusive pricing</h2>
+                <p style="margin: 15px 0px; font-weight: 200; font-size: 12px">Add the pricing and details added to the package</p>
+                
+             <span style="font-weight: 600; display: inline-block; font-size: 30px; transform: translateY(23px)" >$</span> <input placeholder="0.00" type="number" id="currency">
+               <div>Discription</div> 
+               <input placeholder="Add description here" id="input2"> <!-- 80 character --><div style="font-weight: 200; font-size: 10px; transform: translate(257px, -40px)">80 characteristics</div>
+               <div style="margin: 0px 0px 20px">Included</div>
+               <div>
+                  <!-- tick logo --> <div class="content-item"><span style="margin-right:5px"><i class="fa-duotone fa-solid fa-check"></i></span>2 days on site Consulting</div>
+                <!-- menu logo -->   <div class="content-item"><span style="margin-right: 5px"><i class="fa-regular fa-bars"></i></span>2-session zoom meeting</div>
+                <!-- tick logo --><div class="content-item"><span style="margin-right:5px"><i class="fa-duotone fa-solid fa-check"></i></span>10 hours in person training</div>
+                <div style="color: green; margin-top: 35px" id="add"><span style="margin-right: 5px"><i class="fa-solid fa-plus"></i></span>Add</div>
+               </div>
+            </div>
+        </div>
+        <div class="rectangular_box" id="rectangular_box3">
+            <div class="container2"></div>
+            <div class="box-content" id="content-box3">
+                <div class="icon">
+         <i class="fa-solid fa-plus"></i></div>
+                <div style="margin-top: 20px">Add premium, add the price and description to the package</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let addCurrency = document.getElementById("add");
+        let description = document.getElementById("input2");
+        let currency = document.getElementById("currency");
+        const contentbox = document.getElementById("content-box1");
+         const contentbox2 = document.getElementById("content-box3");
+         const container =
+document.querySelector(".container")
+ const container2 =
+document.querySelector(".container2")
+let myFunction = (value) => {
+         return parseFloat(value)*1650
+     }   
+       addCurrency.addEventListener("click", (e)=>{
+            if (description.value ==="" || currency.value === ""){
+            alert("Please input a value");
+        }
+        else{
+            contentbox.style.display = "none";
+            contentbox2.style.display = "none";
+            
+container.insertAdjacentHTML("beforeend", `The currency value is: $${currency.value}<br>Description: ${description.value} <br>`);
+ 
+ container2.insertAdjacentHTML("beforeend", `The Naira value is: N${myFunction(currency.value)}<br>Description: ${description.value} <br>`);
+ currency.value = "";
+ description.value = "";
+ }
+    }); 
+    
+    </script> 
+</body>
+</html>   

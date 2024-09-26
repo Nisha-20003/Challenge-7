@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(200, 200, 200);
+}
+div.contain{
+    display: grid;
+    grid-template-rows: repeat(3, 600px);
+    grid-template-columns: 5fr 7fr 5fr; 
+    grid-gap: 12px;
+    justify-content: center;
+}
+div.rectangular_box{
+   border: 2px solid black;
+   height: 600px;
+   margin-top: 600px;
+   border-radius: 10px;
+}
+#rectangular_box1, #rectangular_box3{
+    border: 2px dashed black;  
+}
+#rectangular_box2{
+    background-color: white;
+}
+#content-box2{
+    padding: 30px 30px;
+}
+input#currency{
+    border: none;
+    margin-top: -30px;
+    margin-bottom: 20px; 
+    padding-left: 20px;
+    height: 60px;
+    width: 400px;
+    font-size: 30px;
+}
+input#currency::placeholder{
+    font-size: 30px;
+}
+#currency:focus{
+    border: none;
+} 
+input#input2{
+    margin: 10px 0px 20px;
+    height: 70px;
+    width: 356px;
+    border: 0.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 31px;
+}
+input#input2::placeholder{
+    padding-left: 10px;
+    font-size: 14px;
+}
+.content-item{
+    margin: 20px;
+}
+#content-box3, #content-box1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 10%;
+}
+.icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #aaa;
+    font-size: 22px;
+    padding: 14.2px;
+}
+.container, .container2{
+    margin: 10px;
+    font-size: 20px;
+}
